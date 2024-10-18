@@ -1,0 +1,111 @@
+/* General */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 30px;
+    font-family: 'Times New Roman', Times, serif
+    
+}
+
+/* Page */
+.page {
+    display: grid;
+    grid-template-areas: 
+        "header     header      header"
+        "nav        nav         nav" 
+        "article-1  article-2   article-3"
+        "article-4  article-5   article-5";
+    grid-auto-columns:33% 33% 33%;
+   
+}
+
+/* Header */
+.brand {
+    font-family: "Snell Roundhand";
+    font-size: 60px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.brand-header {
+    grid-area: header;
+}
+
+/* Nav links */
+.nav-links {
+    grid-area: nav;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid black;
+    border-bottom: none;
+    padding: 30px;
+    margin: 0;
+}
+
+.site-section {
+    list-style-type: none;
+}
+.section-link {
+    font-family: "Futura";
+    font-size: 2rem;
+    text-decoration: none;
+    color: #666;
+    font-weight: 700;
+}
+
+.section-link:hover {
+    text-decoration: underline;
+}
+
+/* Articles */
+.article {
+    padding: 10px;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.article-title {
+    font-style: italic;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+.article-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 250px;
+
+}
+.article-1, .article-2, .article-3 {
+    border-top: 3px solid black;
+}
+
+.article-3, .article-5{
+    border-right: 3px solid black;
+}
+
+.article-1 {
+    grid-area: article-1;
+}
+
+.article-2 {
+    grid-area: article-2;
+}
+
+.article-3 {
+    grid-area: article-3;
+}
+
+.article-4 {
+    grid-area: article-4;
+}
+.article-5 {
+    grid-area: article-5;
+}
